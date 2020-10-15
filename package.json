@@ -2,7 +2,6 @@
   "dependencies": {
     "bottleneck": "^2.19.5",
     "cli-progress": "^3.8.2",
-    "cli-table3": "^0.6.0",
     "colors": "^1.4.0",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",
@@ -23,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/restyler/proxy-checker-cli.git"
+    "url": "git+https://github.com/bawzz234/proxy-checker-cli.git"
   },
   "keywords": [
     "proxy-checker",
