@@ -2,7 +2,6 @@
 'use strict';
 
 const fs = require('fs')
-const Table = require('cli-table3')
 const colors = require('colors')
 const singleRequestExecute = require('../request.js')
 const commandLineArgs = require('command-line-args')
@@ -210,19 +209,7 @@ let promises = lines.map((proxyAddr) =>
 
 Promise.all(promises).then((results) => {
   bar1.stop()
-  if (!options.silent) {
-    let table = new Table({style: {head: ['cyan']}, head: [
-      'Proxy', 'Result', 'Time', 'Response'
-    ]});
-    results.map((item) => {
-      table.push([
-        item.name,
-        item.success ? colors.green('TRUE') : colors.red('FALSE'),
-        item.time,
-        item.success ? item.response : colors.red(item.error)
-      ]);
     })
-    options.mainLog(table.toString())
   }
   
   let good = results.reduce((a,c) => a + (c.success ? 1 : 0), 0)
